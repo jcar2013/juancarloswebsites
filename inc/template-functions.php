@@ -96,12 +96,13 @@ function the_mods_for_section( $section ) {
 	endif;
 
 	if ( 'services' === $section ) :
-		if ( ! empty( get_theme_mod( 'services_header' ) ) ) :
+
+		if ( ! empty( get_theme_mod( 'services_section_header' ) ) ) :
 			$count++;
 			$services_header                             = new stdClass();
 			$services_header->services_background_img    = get_theme_mod( 'service_img' );
-			$services_header->services_section_header    = get_theme_mod( 'services_header' );
-			$services_header->services_section_subheader = get_theme_mod( 'services_subheader' );
+			$services_header->services_section_header    = get_theme_mod( 'services_section_header' );
+			$services_header->services_section_subheader = get_theme_mod( 'services_section_subheader' );
 
 			$mods_class->{'services_mods'}        = $services_header;
 			$mods_class->{'services_mods'}->count = $count;

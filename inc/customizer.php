@@ -543,43 +543,43 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 	);
 
 	/**
-	* Services subheader settings Section
-	*
-	* @since  1.0.0
-	*/
-	$wp_customize->add_setting(
-		'services_subheader',
-		array(
-			'default'   => '',
-			'transport' => 'refresh',
-		)
-	);
-
-	/**
 	* Services header settings Section
 	*
 	* @since  1.0.0
 	*/
 	$wp_customize->add_setting(
-		'services_header',
+		'services_section_header',
 		array(
-			'default'   => '',
-			'transport' => 'refresh',
+			'default'           => '',
+			'transport'         => 'refresh',
 		)
 	);
 
-	// Services header Setting Control.
+	// Services Image Setting Control.
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'services_header_control',
+			'services_section_header_control',
 			array(
 				'label'       => __( 'Services Section header ', 'juancarloswebsites' ),
 				'section'     => 'services_section',
-				'settings'    => 'services_header',
+				'settings'    => 'services_section_header',
 				'type'        => 'text',
-				'description' => 'Add header for services section',
+				'description' => 'Add header for Service background',
 			)
+		)
+	);
+	
+	/**
+	* Services subheader settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_setting(
+		'services_section_subheader',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
 		)
 	);
 
@@ -587,11 +587,11 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'services_subheader_control',
+			'services_section_subheader_control',
 			array(
 				'label'       => __( 'Services Section subheader', 'juancarloswebsites' ),
 				'section'     => 'services_section',
-				'settings'    => 'services_subheader',
+				'settings'    => 'services_section_subheader',
 				'type'        => 'text',
 				'description' => 'Add subheader for services section',
 			)
