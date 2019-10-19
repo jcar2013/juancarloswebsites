@@ -113,9 +113,6 @@ get_header();
 		<?php
 		do_action( 'get_mods_before_section', 'services' );
 		$services_section = get_section_mods( 'services' );
-		echo "<pre>\n";
-		print_r( $services_section );
-		echo "</pre>\n";
 
 		if ( ! empty( $services_section->services_mods->services_section_header ) ) :
 			?>
