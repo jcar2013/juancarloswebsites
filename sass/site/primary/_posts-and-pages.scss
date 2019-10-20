@@ -53,4 +53,24 @@
 			line-height: 1.4em;
 		}
 	}
+
+	main.main-contact {
+		position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+		.entry-content {
+			max-width: 1200px;
+			margin: 50px auto;
+			font-family: $font__body;
+			@include font-size( 1.5 );
+			line-height: 1.4em;
+
+			div#nf-form-1-cont {
+				max-width: 900px;
+				margin: 5px auto;
+			}
+		}
+	}
 }
