@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'juancarloswebsites' ); ?></a>
 
-	<header id="masthead" class="container-fluid site-header">
+	<header id="masthead" class="site-header">
 		<?php
 		if ( get_theme_mod( 'enable_topbar' ) ) : ?>
 			<div class="row topbar-notice" style="background:<?php echo get_theme_mod( 'topbar_color', '#000' ); ?>;">
@@ -33,7 +33,7 @@
 				</div><!-- col col-12 -->
 			</div><!-- topbar-notice -->
 		<?php endif; ?>
-		<div class="row brand-nav-bar">
+		<div class="row brand-nav-bar site-contianer">
 			<div class="col col-10 col-lg-3 branding">
 				<div class="site-branding">
 

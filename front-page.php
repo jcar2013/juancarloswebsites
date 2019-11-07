@@ -128,7 +128,7 @@ get_header();
 							<?php
 							foreach ( $services_section->services as $service ) :
 								?>
-								<div class="col-lg-3">
+								<div class="col-9 col-lg-3">
 									<h6 class="services-box-heading"><?php echo wp_kses_post( $service->service_header ); ?></h6>
 									<ul class="services-box-ul">
 										<?php

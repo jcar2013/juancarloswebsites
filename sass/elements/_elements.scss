@@ -21,6 +21,34 @@ hr {
 	height: 1px;
 }
 
+.site-container {
+  margin-right: auto; 
+  margin-left:  auto; 
+
+  width: 100%;
+
+  padding-right: 15px; 
+  padding-left:  15px; 
+  
+  @include media-breakpoint( sm ) {
+    max-width: 625px; 
+    padding-right: 15px; 
+    padding-left:  15px; 
+  }
+
+  @include media-breakpoint( md ) {
+    max-width: 820px; 
+  }
+
+  @include media-breakpoint( lg ) {
+    max-width: 1100px; 
+  }
+
+  @include media-breakpoint( xl ) {
+    max-width: 1300px; 
+  }
+}
+
 @import "lists";
 
 img {
