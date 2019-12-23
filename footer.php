@@ -26,7 +26,7 @@ $footer_section = get_section_mods( 'footer' );
 								<?php
 									wp_nav_menu(
 										array(
-											'theme_location'   => 'menu-footer',
+											'theme_location'   => 'menu-contact-footer',
 											'menu_class'        => 'footer-menu footer-menu-' . strtolower( $footer_section->footer_menu_title ),
 										)
 									);
@@ -54,7 +54,7 @@ $footer_section = get_section_mods( 'footer' );
 						</div><!-- .social-icons-btns -->
 					</div><!-- .social-components-wrap -->
 				</div><!-- .col -->
-			</div> <!-- .row -->
+			</div> <!-- .rocontact-w -->
 
 			<hr class="featurette-divider">
 
