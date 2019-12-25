@@ -10,7 +10,18 @@
 			new_space = document.querySelector( 'body' );
 			new_space.style.paddingBottom = footer_height + 'px';
 		}
-  }
+	}
+	
+	function navbar_collapse()
+	{
+		var intFrame = window.innerHeight;
+		console.log(intFrame);
+		if ($("#masthead").offset().top > intFrame) {
+			$("#masthead").addClass("transparent-header");
+		} else {
+			$("#masthead").removeClass("transparent-header");
+		}
+	}
 
   window.onresize = function()
 	{
@@ -20,6 +31,9 @@
   window.onload = function()
 	{
 		footer_adjustment();
+
+		navbar_collapse();
+		$(window).scroll(navbar_collapse);
   };
   
 })( jQuery );

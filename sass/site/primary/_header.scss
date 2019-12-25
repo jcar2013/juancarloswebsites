@@ -44,14 +44,15 @@
 ==================================================*/
 .site-header {
 	position: fixed;
+	width: 100%;
 	background: #000;
 	// height: 50px;
 	z-index: 9999;
 	@include prefix( transition, all .3s ease-in-out, o moz webkit );
 
-	&.transparent-header {
-		background: #000;
-	}
+	// &.transparent-header {
+	// 	background: #000;
+	// }
 
 	.brand-nav-bar {
 		height: 60px;
@@ -109,12 +110,12 @@
 .home {
 
 	.site-header {
-		position: fixed;
-		width: 100%;
-		background: black;
+		// position: fixed;
+		// width: 100%;
+		background: transparent;
 
 		&.transparent-header {
-			background: #646371;
+			background: #000;
 		}
 		li i.fa-search,
 		li i.fa-shopping-cart {
