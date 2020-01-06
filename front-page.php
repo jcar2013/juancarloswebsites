@@ -166,14 +166,16 @@ get_header();
 							if($count%2==0) {
 								$slide = "right";
 								$slide_mobile = "right-mobile";
+								$col_order = 0;
 							} else {
 								$slide = "left";
-								$slide_mobile = "left-mobile";       
+								$slide_mobile = "left-mobile";
+								$col_order = 1;     
 							}
 							?>
 
 							<div class="row featurette">
-								<div class="col-md-7 px-5 order-md-<?php echo $count; ?>">
+								<div class="col-md-7 px-5 order-md-<?php echo $col_order; ?>">
 									<h2 class="featurette-heading"><?php echo wp_kses_post( $project->project_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $project->project_subheader ); ?></span></h2>
 									<p class="featurette-text"><?php echo wp_kses_post( $project->project_description ); ?></p>
 									<div class="text-center">
