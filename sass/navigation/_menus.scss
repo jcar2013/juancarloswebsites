@@ -1,12 +1,6 @@
 .main-navigation {
 	position: relative;
 	clear: both;
-	// display: flex;
-	// align-items: center;
-	// justify-content: flex-end;
-	// flex-wrap: wrap;
-	// height: 100%;
-	// width: 100%;
 	z-index: 100;
 	@include prefix( transition, $trans_25, webkit moz o);
 
@@ -25,7 +19,7 @@
 			height: 5px;
 			margin: 5px 0;
 			opacity: 1;
-			background: wheat;
+			background: #ffffff;
 			@include prefix( transition, $trans_25, webkit moz o);
 
 			&-top {
@@ -64,7 +58,6 @@
 	}
 
 	> div {
-		// flex: 1 100%;
 		height: 100%;
 		width: 100%;
 
@@ -75,9 +68,6 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
-			// width: 100vw; 		
-			// height: 0;
-			// top: -30px;
 			opacity: 0;
 			overflow: hidden;
 			z-index: 100;
@@ -105,9 +95,7 @@
 					display: block;
 					list-style: none;
 					margin: 0;
-					// top: -30px;
 					left: 0;
-					// height: 0;
 					width: 100%;
 					padding: 0;
 					opacity: 0;
@@ -217,16 +205,13 @@
 		}
 
 		@include media-breakpoint( lg ) {
-			// flex: .2 10%;
 
 			> ul {
 				display: flex;
-				// align-items: flex-start;
 				justify-content: flex-end;
 				background: transparent;
 				overflow: visible;
 				top: 0;
-				// width: 100%;
 				opacity: 1;
 				@include prefix( box-shadow, 0 1px 6px 0 rgba(#000, 0), webkit moz o );
 

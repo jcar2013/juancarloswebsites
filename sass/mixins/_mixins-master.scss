@@ -58,6 +58,11 @@
 }
 
 @mixin media-breakpoint( $breakpoint ) {
+	@if $breakpoint == xxs {
+		@media screen and ( min-width: 375px ) {
+			@content;
+		}
+	}
 	@if $breakpoint == xs {
 		@media screen and ( min-width: 480px ) {
 			@content;

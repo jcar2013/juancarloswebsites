@@ -46,22 +46,14 @@
 	position: fixed;
 	width: 100%;
 	background: #000;
-	// height: 50px;
 	z-index: 9999;
 	@include prefix( transition, all .3s ease-in-out, o moz webkit );
 
-	// &.transparent-header {
-	// 	background: #000;
-	// }
-
 	.brand-nav-bar {
 		height: 60px;
-		// margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		// padding-top: 40px;
-		// max-width: 1200px;
 		@include prefix( transition, all .6s ease-in-out, o moz webkit );
 
 		.branding {
@@ -71,7 +63,7 @@
 
 			.site-title {
 				text-align: start;
-				font-size: 1.75rem;
+				font-size: 1.3rem;
 				font-family: $font__title;
 				a {
 					color: #ffffff;
@@ -94,12 +86,16 @@
 		}
 	}
 
-	// @include media-breakpoint( xs ) {
-	// 	height: 60px;
-	// }
+	@include media-breakpoint( xxs ) {
+		.brand-nav-bar .branding .site-title {
+			font-size: 1.65rem;
+		}
+	}
 
 	// @include media-breakpoint( sm ) {
-	// 	height: 60px;
+	// 	.brand-nav-bar .branding .site-title {
+	// 		font-size: 1.85rem;
+	// 	}
 	// }
 
 	// @include media-breakpoint( md ) {
