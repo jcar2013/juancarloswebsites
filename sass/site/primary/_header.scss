@@ -44,6 +44,7 @@
 ==================================================*/
 .site-header {
 	position: fixed;
+	padding: 0 15px;
 	width: 100%;
 	background: #000;
 	z-index: 9999;
@@ -98,16 +99,17 @@
 	// 	}
 	// }
 
-	// @include media-breakpoint( md ) {
-	// 	height: 80px;
-	// }
+	@include media-breakpoint( lg ) {
+		padding: 0 25px;
+	}
 }
 
 .home {
 
 	.site-header {
+		// background: rgba( #000, .9 );
 		background: transparent;
-
+		
 		&.transparent-header {
 			background: #000;
 		}

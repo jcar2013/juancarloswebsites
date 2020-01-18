@@ -33,7 +33,7 @@
 				</div><!-- col col-12 -->
 			</div><!-- topbar-notice -->
 		<?php endif; ?>
-		<div class="row brand-nav-bar site-container">
+		<div class="row brand-nav-bar">
 			<div class="col col-10 col-lg-3 branding">
 				<div class="site-branding">
 
