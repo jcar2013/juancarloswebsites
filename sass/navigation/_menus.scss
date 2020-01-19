@@ -61,7 +61,7 @@
 		height: 0;
 		overflow: hidden;
 		width: 100%;
-		@include prefix( transition, $trans_25, webkit moz o);
+		@include prefix( transition, $trans_45, webkit moz o);
 
 		// Stoped cleaning code here
 		> ul {
@@ -74,7 +74,7 @@
 			// height: 0;
 			overflow: hidden;
 			z-index: 100;
-			background: rgba( #000, .9 );
+			background: rgba( #000, .7 );
 			@include prefix( transition, $trans_25, webkit moz o);
 			@include prefix( box-shadow, 0 1px 6px 0 rgba(#000, 0.4), webkit moz o );
 
@@ -254,7 +254,7 @@
 	div {
 		height: 70px;
 		overflow: hidden;
-		@include prefix( transition, $trans_25, webkit moz o);
+		@include prefix( transition, $trans_45, webkit moz o);
 
 		ul#primary-menu,
 		ul#cart-menu {

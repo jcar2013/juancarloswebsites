@@ -107,8 +107,7 @@
 .home {
 
 	.site-header {
-		// background: rgba( #000, .9 );
-		background: transparent;
+		background: #000;
 		
 		&.transparent-header {
 			background: #000;
@@ -121,6 +120,12 @@
 
 	#content {
 		padding: 0;
+	}
+
+	@include media-breakpoint( lg ) {
+		.site-title {
+			background: transparent;
+		}
 	}
 }
 
