@@ -808,8 +808,8 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
 			'priority'       => 10,
-			'title'          => __( 'Add Projects/Examples Section', 'juancarloswebsites' ),
-			'description'    => __( 'Projects/Examples Options version 1.0.0', 'juancarloswebsites' ),
+			'title'          => __( 'Add Projects/Contributions Section', 'juancarloswebsites' ),
+			'description'    => __( 'Projects/Contributions Options version 1.0.0', 'juancarloswebsites' ),
 			'panel'          => 'juancarloswebsites_theme_options',
 		)
 	);
@@ -928,30 +928,6 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 			)
 		);
 
-		// Project button text control.
-		$wp_customize->add_setting(
-			'project_' . $i . '_btn_text',
-			array(
-				'default'           => '',
-				'transport'         => 'refresh',
-			)
-		);
-
-		// Project button text Setting Control.
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'project_btn_text_control' . $i,
-				array(
-					'label'       => __( 'Project Button Text ' . $i, 'juancarloswebsites' ),
-					'section'     => 'projects_section',
-					'settings'    => 'project_' . $i . '_btn_text',
-					'type'        => 'text',
-					'description' => 'Add Project button Text #' . $i,
-				)
-			)
-		);
-
 		// Project button link Setting.
 		$wp_customize->add_setting(
 			'project_' . $i . '_btn_link',
@@ -972,6 +948,30 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 					'settings'    => 'project_' . $i . '_btn_link',
 					'type'        => 'text',
 					'description' => 'Example: https://mywebsite.com/',
+				)
+			)
+		);
+
+		// Project button git control.
+		$wp_customize->add_setting(
+			'project_' . $i . '_btn_git',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+			)
+		);
+
+		// Project button git Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'project_btn_git_control' . $i,
+				array(
+					'label'       => __( 'Project Git link button ' . $i, 'juancarloswebsites' ),
+					'section'     => 'projects_section',
+					'settings'    => 'project_' . $i . '_btn_git',
+					'type'        => 'text',
+					'description' => 'Example: https://github.com/',
 				)
 			)
 		);
@@ -1020,6 +1020,218 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 					'settings'    => '2nd_project_img' . $i,
 					'type'        => 'image',
 					'description' => 'Add 2nd image for Project #' . $i,
+				)
+			)
+		);
+
+	endfor;
+
+	/**
+	* Contributions header settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_setting(
+		'contributions_header',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
+		)
+	);
+
+	// Contributions header Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'contributions_header_control',
+			array(
+				'label'       => __( 'Contributions Section header ', 'juancarloswebsites' ),
+				'section'     => 'projects_section',
+				'settings'    => 'contributions_header',
+				'type'        => 'text',
+				'description' => 'Add header for Project Contributions section',
+			)
+		)
+	);
+
+	for ( $i = 1; $i <= 4; $i++ ) :
+
+		/**
+		* Contribution Title settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'contribution_header_' . $i,
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Contribution Title Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'contribution_header_' . $i . '_control',
+				array(
+					'label'       => __( 'Contribution ' . $i . ' Title', 'juancarloswebsites' ),
+					'section'     => 'projects_section',
+					'settings'    => 'contribution_header_' . $i,
+					'type'        => 'text',
+					'description' => 'Add Title for Contribution #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Contribution SubTitle settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'contribution_subheader_' . $i,
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Contribution SubTitle Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'contribution_subheader_' . $i . '_control',
+				array(
+					'label'       => __( 'Contribution ' . $i . ' SubTitle', 'juancarloswebsites' ),
+					'section'     => 'projects_section',
+					'settings'    => 'contribution_subheader_' . $i,
+					'type'        => 'text',
+					'description' => 'Add SubTitle for Contribution #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Contributions Description settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'contribution_description_' . $i,
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Contributions Description Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'contribution_description_' . $i . '_control',
+				array(
+					'label'       => __( 'Contribution ' . $i . ' Description', 'juancarloswebsites' ),
+					'section'     => 'projects_section',
+					'settings'    => 'contribution_description_' . $i,
+					'type'        => 'textarea',
+					'description' => 'Add Description for Contribution #' . $i,
+				)
+			)
+		);
+
+		// Contributions button link Setting.
+		$wp_customize->add_setting(
+			'contribution_' . $i . '_btn_link',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+			)
+		);
+
+		// Contributions button link Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'contribution_btn_link_control' . $i,
+				array(
+					'label'       => __( 'Contribution Button Link ' . $i, 'juancarloswebsites' ),
+					'section'     => 'projects_section',
+					'settings'    => 'contribution_' . $i . '_btn_link',
+					'type'        => 'text',
+					'description' => 'Example: https://mywebsite.com/',
+				)
+			)
+		);
+
+		// Contribution git button control.
+		$wp_customize->add_setting(
+			'contribution_' . $i . '_btn_git',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+			)
+		);
+
+		// Contribution git button Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'contribution_btn_git_control' . $i,
+				array(
+					'label'       => __( 'Contribution Git link button ' . $i, 'juancarloswebsites' ),
+					'section'     => 'projects_section',
+					'settings'    => 'contribution_' . $i . '_btn_git',
+					'type'        => 'text',
+					'description' => 'Example: https://github.com/',
+				)
+			)
+		);
+
+		// Contributions Image Setting.
+		$wp_customize->add_setting(
+			'1st_contribution_img' . $i,
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+			)
+		);
+
+		// Contributions Image Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'1st_contribution_img' . $i . '_control',
+				array(
+					'label'       => '1st Contribution Image ' . $i,
+					'section'     => 'projects_section',
+					'settings'    => '1st_contribution_img' . $i,
+					'type'        => 'image',
+					'description' => 'Add 1st image for Contribution #' . $i,
+				)
+			)
+		);
+
+		// Contributions Image Setting.
+		$wp_customize->add_setting(
+			'2nd_contribution_img' . $i,
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+			)
+		);
+
+		// Contributions Image Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'2nd_contribution_img' . $i . '_control',
+				array(
+					'label'       => '2nd Contribution Image ' . $i,
+					'section'     => 'projects_section',
+					'settings'    => '2nd_contribution_img' . $i,
+					'type'        => 'image',
+					'description' => 'Add 2nd image for Contribution #' . $i,
 				)
 			)
 		);

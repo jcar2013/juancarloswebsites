@@ -135,10 +135,11 @@ function the_mods_for_section( $section ) {
 	if ( 'projects' === $section ) :
 		if ( ! empty( get_theme_mod( 'projects_header' ) ) ) :
 			$count++;
-			$projects_header                             = new stdClass();
-			$projects_header->project_section_header    = get_theme_mod( 'projects_header' );
+			$projects_section                             = new stdClass();
+			$projects_section->project_section_header    = get_theme_mod( 'projects_header' );
+			$projects_section->contribution_section_header    = get_theme_mod( 'contributions_header' );
 
-			$mods_class->{'projects_mods'}        = $projects_header;
+			$mods_class->{'projects_mods'}        = $projects_section;
 			$mods_class->{'projects_mods'}->count = $count;
 		endif;
 
@@ -152,11 +153,10 @@ function the_mods_for_section( $section ) {
 				${"project_$i"}->project_header      = get_theme_mod( 'project_header_' . $i );
 				${"project_$i"}->project_subheader   = get_theme_mod( 'project_subheader_' . $i );
 				${"project_$i"}->project_description = get_theme_mod( 'project_description_' . $i );
-				${"project_$i"}->project_btn_text    = get_theme_mod( 'project_' . $i . '_btn_text' );
+				${"project_$i"}->project_btn_git    = get_theme_mod( 'project_' . $i . '_btn_git' );
 				${"project_$i"}->project_btn_link    = get_theme_mod( 'project_' . $i . '_btn_link' );
 				${"project_$i"}->project_img_1       = get_theme_mod( '1st_project_img' . $i );
 				${"project_$i"}->project_img_2       = get_theme_mod( '2nd_project_img' . $i );
-
 
 				$mods_class->projects->{"project_$i"} = ${"project_$i"};
 
@@ -164,6 +164,29 @@ function the_mods_for_section( $section ) {
 		}
 
 		$mods_class->projects->count = $count;
+
+		$mods_class->contributions = new stdClass();
+		$count = 0;
+		for ( $i = 1; $i <= 4; $i++ ) {
+
+			if ( ! empty( get_theme_mod( 'contribution_header_' . $i ) ) ) :
+				$count++;
+				${"contribution_$i"}                      = new stdClass();
+				${"contribution_$i"}->contribution_header      = get_theme_mod( 'contribution_header_' . $i );
+				${"contribution_$i"}->contribution_subheader   = get_theme_mod( 'contribution_subheader_' . $i );
+				${"contribution_$i"}->contribution_description = get_theme_mod( 'contribution_description_' . $i );
+				${"contribution_$i"}->contribution_btn_git    = get_theme_mod( 'contribution_' . $i . '_btn_git' );
+				${"contribution_$i"}->contribution_btn_link    = get_theme_mod( 'contribution_' . $i . '_btn_link' );
+				${"contribution_$i"}->contribution_img_1       = get_theme_mod( '1st_contribution_img' . $i );
+				${"contribution_$i"}->contribution_img_2       = get_theme_mod( '2nd_contribution_img' . $i );
+
+				$mods_class->contributions->{"contribution_$i"} = ${"contribution_$i"};
+
+			endif;
+		}
+
+		$mods_class->contributions->count = $count;
+
 		return $mods_class;
 	endif;
 

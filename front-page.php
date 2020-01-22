@@ -149,67 +149,110 @@ get_header();
 		<?php
 		do_action( 'get_mods_before_section', 'projects' );
 		$projects_section = get_section_mods( 'projects' );
+		// echo "<pre>\n";
+		// print_r( $projects_section );
+		// echo "</pre>\n";
 
 		if ( ! empty( $projects_section->projects_mods->project_section_header ) ) :
 			?>
 
-
 			<section class="projects">
-				<div class="container">
-					<hr class="featurette-divider">
+				<div class="row">
+					<div class="container">
+						<hr class="featurette-divider">
 
-					<?php
-
-					$count = 0;
-					foreach ( $projects_section->projects as $project ) :
-						if ( $project->project_header ) :
-							if($count%2==0) {
-								$slide = "right";
-								$slide_mobile = "right-mobile";
-								$col_order = 0;
-							} else {
-								$slide = "left";
-								$slide_mobile = "left-mobile";
-								$col_order = 1;     
-							}
-							?>
-
-							<div class="row featurette">
-								<div class="col-md-7 px-5 order-md-<?php echo $col_order; ?>">
-									<h2 class="featurette-heading"><?php echo wp_kses_post( $project->project_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $project->project_subheader ); ?></span></h2>
-									<p class="featurette-text"><?php echo wp_kses_post( $project->project_description ); ?></p>
-									<div class="text-center">
-										<a class="btn btn-secondary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_link ); ?>"><?php echo wp_kses_post( $project->project_btn_text ); ?></a>
-									</div>
-								</div>
-								<div class="col-md-5">
-									<div 
-									class="<?php echo $slide; ?> project-img img-fluid mx-auto" 
-									style="background-image:url(<?php echo esc_attr( $project->project_img_1 ); ?>)" >
-									</div>
-									<div class="<?php echo $slide_mobile; ?> project-mobile-img img-fluid mx-auto" 
-									style="background-image:url(<?php echo esc_attr( $project->project_img_2 ); ?>)" >
-									</div>
-								</div>
-							</div>
-							<?php 
-								if($count !== $projects_section->projects->count) {
-									echo "<hr class='featurette-divider'>";
+						<?php
+						$count = 0;
+						foreach ( $projects_section->projects as $project ) :
+							if ( $project->project_header ) :
+								if($count%2==0) {
+									$slide = "right";
+									$slide_mobile = "right-mobile";
+									$col_order = 0;
+								} else {
+									$slide = "left";
+									$slide_mobile = "left-mobile";
+									$col_order = 1;     
 								}
-								$count++;
 								?>
-						<?php endif; ?>
-					<?php endforeach; ?>
 
+								<div class="row featurette">
+									<div class="col-md-7 px-5 order-md-<?php echo $col_order; ?>">
+										<h2 class="featurette-heading"><?php echo wp_kses_post( $project->project_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $project->project_subheader ); ?></span></h2>
+										<p class="featurette-text"><?php echo wp_kses_post( $project->project_description ); ?></p>
+										<div class="text-center">
+											<a class="btn btn-secondary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_link ); ?>">Visit Page</a>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div 
+										class="<?php echo $slide; ?> project-img img-fluid mx-auto" 
+										style="background-image:url(<?php echo esc_attr( $project->project_img_1 ); ?>)" >
+										</div>
+										<div class="<?php echo $slide_mobile; ?> project-mobile-img img-fluid mx-auto" 
+										style="background-image:url(<?php echo esc_attr( $project->project_img_2 ); ?>)" >
+										</div>
+									</div>
+								</div>
+								<?php 
+									if($count !== $projects_section->projects->count) {
+										echo "<hr class='featurette-divider'>";
+									}
+									$count++;
+									?>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</div>
+
+					<div class="container">
+						<hr class="featurette-divider">
+
+						<?php
+						$count = 0;
+						foreach ( $projects_section->contributions as $contribution ) :
+							if ( $contribution->contribution_header ) :
+								if($count%2==0) {
+									$slide = "right";
+									$slide_mobile = "right-mobile";
+									$col_order = 0;
+								} else {
+									$slide = "left";
+									$slide_mobile = "left-mobile";
+									$col_order = 1;     
+								}
+								?>
+
+								<div class="row featurette">
+									<div class="col-md-7 px-5 order-md-<?php echo $col_order; ?>">
+										<h2 class="featurette-heading"><?php echo wp_kses_post( $contribution->contribution_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $contribution->contribution_subheader ); ?></span></h2>
+										<p class="featurette-text"><?php echo wp_kses_post( $contribution->contribution_description ); ?></p>
+										<div class="text-center">
+											<a class="btn btn-secondary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $contribution->contribution_btn_link ); ?>">Visit Page</a>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div 
+										class="<?php echo $slide; ?> project-img img-fluid mx-auto" 
+										style="background-image:url(<?php echo esc_attr( $contribution->contribution_img_1 ); ?>)" >
+										</div>
+										<div class="<?php echo $slide_mobile; ?> project-mobile-img img-fluid mx-auto" 
+										style="background-image:url(<?php echo esc_attr( $contribution->contribution_img_2 ); ?>)" >
+										</div>
+									</div>
+								</div>
+								<?php 
+									if($count !== $contributions_section->projects->count) {
+										echo "<hr class='featurette-divider'>";
+									}
+									$count++;
+									?>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</div>
 				</div>
+
 			</section>
 		<?php endif; ?>
-
-
-
-
-
-
 
 		<?php else : ?>
 			<div id="primary" class="content-area row">
