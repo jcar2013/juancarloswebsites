@@ -991,7 +991,7 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 				$wp_customize,
 				'1st_project_img' . $i . '_control',
 				array(
-					'label'       => '1st Project Image ' . $i,
+					'label'       => '1st Project Desktop Image ' . $i,
 					'section'     => 'projects_section',
 					'settings'    => '1st_project_img' . $i,
 					'type'        => 'image',
@@ -1015,7 +1015,7 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 				$wp_customize,
 				'2nd_project_img' . $i . '_control',
 				array(
-					'label'       => '2nd Project Image ' . $i,
+					'label'       => '2nd Project Mobile Image ' . $i,
 					'section'     => 'projects_section',
 					'settings'    => '2nd_project_img' . $i,
 					'type'        => 'image',
@@ -1203,7 +1203,7 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 				$wp_customize,
 				'1st_contribution_img' . $i . '_control',
 				array(
-					'label'       => '1st Contribution Image ' . $i,
+					'label'       => '1st Contribution Desktop Image ' . $i,
 					'section'     => 'projects_section',
 					'settings'    => '1st_contribution_img' . $i,
 					'type'        => 'image',
@@ -1227,7 +1227,7 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 				$wp_customize,
 				'2nd_contribution_img' . $i . '_control',
 				array(
-					'label'       => '2nd Contribution Image ' . $i,
+					'label'       => '2nd Contribution Mobile Image ' . $i,
 					'section'     => 'projects_section',
 					'settings'    => '2nd_contribution_img' . $i,
 					'type'        => 'image',

@@ -328,11 +328,18 @@ section.services {
 
 /*------------------ Projects Section  ------------------*/
 .home section.projects {
-  display: flex;
+	display: flex;
+	flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.8rem 0;
-
+	padding: 45px 50px;
+	
+	/** projects title & description **/
+	.featurette {
+		.featurette-heading {
+			font-size: 1.95rem;
+		}
+	}
 
   /** projects images **/
   .col-md-5 {
