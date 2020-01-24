@@ -149,9 +149,6 @@ get_header();
 		<?php
 		do_action( 'get_mods_before_section', 'projects' );
 		$projects_section = get_section_mods( 'projects' );
-		echo "<pre>\n";
-		print_r( $projects_section );
-		echo "</pre>\n";
 
 		if ( ! empty( $projects_section->projects_mods->project_section_header ) ) :
 			?>
@@ -190,12 +187,14 @@ get_header();
 										</div>
 									</div>
 									<div class="col-md-5">
-										<div class="<?php echo $slide; ?> project-img img-fluid mx-auto" 
-										style="background-image:url(<?php echo esc_attr( $project->project_img_1 ); ?>)" >
-										</div>
-										<div class="<?php echo $slide_mobile; ?> project-mobile-img img-fluid mx-auto" 
-										style="background-image:url(<?php echo esc_attr( $project->project_img_2 ); ?>)" >
-										</div>
+										<!-- <div class="<?php //echo $slide; ?> project-img img-fluid mx-auto" 
+										style="background-image:url(<?php //echo esc_attr( $project->project_img_1 ); ?>)" >
+										</div> -->
+										<img src="<?php echo esc_attr( $project->project_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image">
+										<!-- <div class="<?php //echo $slide_mobile; ?> project-mobile-img img-fluid mx-auto" 
+										style="background-image:url(<?php //echo esc_attr( $project->project_img_2 ); ?>)" >
+										</div> -->
+										<img src="<?php echo esc_attr( $project->project_img_2 ); ?>" class="project-mobile-img img-fluid mx-auto" alt="project mobile image">
 									</div>
 								</div>
 								<?php 
