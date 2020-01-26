@@ -332,7 +332,7 @@ section.services {
 	flex-direction: column;
   justify-content: center;
   align-items: center;
-	padding: 45px 50px;
+	padding: 45px 20px;
 
 	/** projects title & description **/
 	#service-intro,
@@ -343,19 +343,16 @@ section.services {
 		}
 	}
 
-	.featurette {
+	.col-description {
 		.featurette-heading {
 			font-size: 1.2rem;
 		}
 
-		.featurette-text {
-
-		}
 	}
 
 
   /** projects images **/
-  .col-md-5 {
+  .col-image {
     // height: auto;
 
     img.project-img {
