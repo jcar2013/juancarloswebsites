@@ -159,7 +159,7 @@ get_header();
 						<h2 class="services-title text-uppercase"><?php echo wp_kses_post( $projects_section->projects_mods->project_section_header ); ?>	</h2>
 						<!-- <h3 class="section-subheading"><?php //echo wp_kses_post( $services_section->services_mods->services_section_subheader ); ?></h3> -->
 					</div>
-					<!-- <div class="col-12 project"> -->
+					<div class="col-12 project">
 						<hr class="featurette-divider">
 
 						<?php
@@ -180,7 +180,7 @@ get_header();
 								<div class="row featurette">
 									<div class="col-md-7 order-md-<?php echo $col_order; ?> col-description">
 										<h2 class="featurette-heading"><?php echo wp_kses_post( $project->project_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $project->project_subheader ); ?></span></h2>
-										<p class="featurette-text"><?php echo wp_kses_post( $project->project_description ); ?></p>
+										<p class="project-description"><?php echo wp_kses_post( $project->project_description ); ?></p>
 										<div class="text-center">
 											<a class="btn btn-primary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_link ); ?>">Visit Page</a>
 											<a class="btn btn-secondary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_git ); ?>">Github Repo</a>
@@ -205,7 +205,7 @@ get_header();
 									?>
 							<?php endif; ?>
 						<?php endforeach; ?>
-					<!-- </div> -->
+					</div>
 					<div id="projects-intro" class="col-lg-12 text-center">
 						<h2 class="services-title text-uppercase"><?php echo wp_kses_post( $projects_section->projects_mods->contribution_section_header ); ?>	</h2>
 						<!-- <h3 class="section-subheading"><?php //echo wp_kses_post( $services_section->services_mods->services_section_subheader ); ?></h3> -->
@@ -233,7 +233,7 @@ get_header();
 										<h2 class="featurette-heading text-center"><?php echo wp_kses_post( $contribution->contribution_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $contribution->contribution_subheader ); ?></span></h2>
 										<p class="featurette-text"><?php echo wp_kses_post( $contribution->contribution_description ); ?></p>
 										<div class="text-center">
-											<a class="btn btn-secondary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $contribution->contribution_btn_link ); ?>">Visit Page</a>
+											<a class="btn btn-primary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $contribution->contribution_btn_link ); ?>">Visit Page</a>
 											<a class="btn btn-secondary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_git ); ?>">Github Repo</a>
 										</div>
 									</div>

@@ -283,10 +283,10 @@ section.services {
   color: #ffffff;
 
   /** Service section title **/
-  div#service-intro .section-subheading {
-		// font-family: $font__body;
-    @include font-size( 1.4 );
-  }
+  // div#service-intro .section-subheading {
+	// 	// font-family: $font__body;
+  //   @include font-size( 1.4 );
+  // }
 
   /** services box **/
   div#services-list.row {
@@ -337,14 +337,16 @@ section.services {
 	/** projects title & description **/
 	#service-intro,
 	#projects-intro {
-		h2 {
-			font-size: 1.5rem;
-			font-family: $font__heading;
-		}
+		// h2 {
+		// 	font-size: 1.5rem;
+		// 	font-family: $font__heading;
+		// }
 	}
 
 	.col-description {
-		.featurette-heading {
+		padding: 0 35px;
+
+		.project-description {
 			font-size: 1.2rem;
 		}
 
