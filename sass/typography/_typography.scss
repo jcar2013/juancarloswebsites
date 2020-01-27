@@ -7,8 +7,8 @@ textarea {
 	color: $color__text-main;
 	font-family: $font__body;
 	// font-family: 'Open Sans Condensed';
-	font-weight: 500;
-	@include font-size(1.2);
+	font-weight: 600;
+	@include font-size( 1.05 );
 	line-height: $font__line-height-body;
 }
 

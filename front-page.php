@@ -150,8 +150,7 @@ get_header();
 		do_action( 'get_mods_before_section', 'projects' );
 		$projects_section = get_section_mods( 'projects' );
 
-		if ( ! empty( $projects_section->projects_mods->project_section_header ) ) :
-			?>
+		if ( ! empty( $projects_section->projects_mods->project_section_header ) ) : ?>
 
 			<section class="projects">
 				<div class="row row-projects">
@@ -179,7 +178,7 @@ get_header();
 
 								<div class="row featurette">
 									<div class="col-md-7 order-md-<?php echo $col_order; ?> col-description">
-										<h2 class="featurette-heading"><?php echo wp_kses_post( $project->project_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $project->project_subheader ); ?></span></h2>
+										<h2 class="project-heading"><?php echo wp_kses_post( $project->project_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $project->project_subheader ); ?></span></h2>
 										<p class="project-description"><?php echo wp_kses_post( $project->project_description ); ?></p>
 										<div class="text-center">
 											<a class="btn btn-primary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_link ); ?>">Visit Page</a>
@@ -187,13 +186,7 @@ get_header();
 										</div>
 									</div>
 									<div class="col-md-5 col-image">
-										<!-- <div class="<?php //echo $slide; ?> project-img img-fluid mx-auto" 
-										style="background-image:url(<?php //echo esc_attr( $project->project_img_1 ); ?>)" >
-										</div> -->
 										<img src="<?php echo esc_attr( $project->project_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image">
-										<!-- <div class="<?php //echo $slide_mobile; ?> project-mobile-img img-fluid mx-auto" 
-										style="background-image:url(<?php //echo esc_attr( $project->project_img_2 ); ?>)" >
-										</div> -->
 										<img src="<?php echo esc_attr( $project->project_img_2 ); ?>" class="project-mobile-img img-fluid mx-auto" alt="project mobile image">
 									</div>
 								</div>
@@ -214,7 +207,6 @@ get_header();
 						<hr class="featurette-divider">
 
 						<?php
-						$count = 0;
 						foreach ( $projects_section->contributions as $contribution ) :
 							if ( $contribution->contribution_header ) :
 								if($count%2==0) {
@@ -229,22 +221,17 @@ get_header();
 								?>
 
 								<div class="row featurette">
-									<div class="col-md-7 order-md-<?php echo $col_order; ?>">
-										<h2 class="featurette-heading text-center"><?php echo wp_kses_post( $contribution->contribution_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $contribution->contribution_subheader ); ?></span></h2>
+									<div class="col-md-7 order-md-<?php echo $col_order; ?> col-description">
+										<h2 class="project-heading"><?php echo wp_kses_post( $contribution->contribution_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $contribution->contribution_subheader ); ?></span></h2>
 										<p class="featurette-text"><?php echo wp_kses_post( $contribution->contribution_description ); ?></p>
 										<div class="text-center">
 											<a class="btn btn-primary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $contribution->contribution_btn_link ); ?>">Visit Page</a>
 											<a class="btn btn-secondary btn-xl js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_git ); ?>">Github Repo</a>
 										</div>
 									</div>
-									<div class="col-md-5">
-										<div 
-										class="<?php echo $slide; ?> project-img img-fluid mx-auto" 
-										style="background-image:url(<?php echo esc_attr( $contribution->contribution_img_1 ); ?>)" >
-										</div>
-										<div class="<?php echo $slide_mobile; ?> project-mobile-img img-fluid mx-auto" 
-										style="background-image:url(<?php echo esc_attr( $contribution->contribution_img_2 ); ?>)" >
-										</div>
+									<div class="col-md-5 col-image">
+										<img src="<?php echo esc_attr( $contribution->contribution_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image">
+										<img src="<?php echo esc_attr( $contribution->contribution_img_2 ); ?>" class="project-mobile-img img-fluid mx-auto" alt="project mobile image">
 									</div>
 								</div>
 								<?php 

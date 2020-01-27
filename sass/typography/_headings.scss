@@ -13,6 +13,7 @@ body {
 	h2 {
 		clear: both;
 		font-family: $font__heading;
+		font-weight: 600;
 		@include font-size( 1.5 );
 	}
 

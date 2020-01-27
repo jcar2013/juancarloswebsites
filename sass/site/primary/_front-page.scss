@@ -319,10 +319,10 @@ section.services {
       }
     }
 	}
+
 	@include media-breakpoint( lg ) {
 		height: 70vh;
 	}
-
 }
 /*------------------ End Services  ------------------*/
 
@@ -334,24 +334,16 @@ section.services {
   align-items: center;
 	padding: 45px 20px;
 
-	/** projects title & description **/
-	#service-intro,
-	#projects-intro {
-		// h2 {
-		// 	font-size: 1.5rem;
-		// 	font-family: $font__heading;
-		// }
-	}
-
 	.col-description {
 		padding: 0 35px;
 
-		.project-description {
-			font-size: 1.2rem;
+		.project-heading {
+			@include font-size( 1.25 );
 		}
-
+		.project-description {
+			padding: 0 5px;
+		}
 	}
-
 
   /** projects images **/
   .col-image {
@@ -385,6 +377,16 @@ section.services {
   /** Divider **/
   hr.featurette-divider {
     margin: 1.2rem 0;
-  }
+	}
+	
+	@include media-breakpoint( lg ) {
+		padding: 60px 85px;
+
+		.col-description {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}		
+	}
 }
 /*------------------ End Projects Section  ------------------*/
