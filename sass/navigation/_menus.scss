@@ -74,7 +74,7 @@
 			// height: 0;
 			overflow: hidden;
 			z-index: 100;
-			background: rgba( #000, .7 );
+			background: rgba( #000, .85 );
 			@include prefix( transition, $trans_25, webkit moz o);
 			@include prefix( box-shadow, 0 1px 6px 0 rgba(#000, 0.4), webkit moz o );
 
@@ -131,8 +131,8 @@
 
 			a {
 				color: #000;
-				font-family: $font__body;
-				font-weight: 500;
+				font-family: $font__mont;
+				font-weight: 600;
 				font-size: 1rem;
 				padding: 4px 0;
 				white-space: nowrap;
@@ -189,22 +189,6 @@
 					}
 				}
 			}
-
-			// @media screen and  ( max-width: 992px ) {
-			// 	// background: rgba( #ffffff, 1 );
-
-			// 	> li {
-			// 		height: 100%;
-
-			// 		ul {
-			// 			top: 0;
-			// 			height: auto;
-			// 			opacity: 1;
-			// 			z-index: 999;
-			// 			@include prefix( box-shadow, 0 0 0 0 rgba(#000, 0.4), webkit moz o );					
-			// 		}
-			// 	}
-			// }
 		}
 
 		@include media-breakpoint( lg ) {
@@ -255,15 +239,6 @@
 		height: 70px;
 		overflow: hidden;
 		@include prefix( transition, $trans_45, webkit moz o);
-
-		ul#primary-menu,
-		ul#cart-menu {
-			// transition: all .25s ease-in-out;
-			// top: 0;
-			// height: 75px;
-			// overflow: visible;
-			// opacity: 1;
-		}
 	}
 } 
 
