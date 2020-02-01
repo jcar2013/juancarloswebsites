@@ -21,6 +21,27 @@ input[type="submit"] {
 	}
 }
 
-.btn {
+.btn-1 {
 	margin-bottom: 18px;
+	font-family: $font__mont;
+	color: #ffffff;
+	background-color: rgba( #000, .9 );
+	border-color: rgba( #000, 1);
+
+	&:hover {
+		color: $color__link-hover;
+		// background-color: rgba( #272B2E, 1 );
+	}
+}
+
+.btn-2 {
+	margin-bottom: 18px;
+	font-family: $font__mont;
+	color: #ffffff;
+	background-color: rgba( #3B4043, 1 );
+	border-color: rgba( #000, 1);
+
+	&:hover {
+		color: $color__link-hover;
+	}
 }
