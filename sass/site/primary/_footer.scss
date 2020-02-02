@@ -40,7 +40,7 @@
   .footer-social-title,
   .social-icons-btns {
     text-align: center;
-    font-family: $font__body;
+    // text-decoration: underline;
   }
 
   hr.featurette-divider {
@@ -52,18 +52,15 @@
     color: #fff;
   }
   
-  .row-lower-footer,
   .site-info {
-    padding: 0 0 15px 0;
+    padding: 0 0 10px 0;
   }
 
   // Might move to layout file
   .site-container {
     margin-right: auto; 
     margin-left:  auto; 
-  
     width: 100%; 
-  
     padding-right: 15px; 
     padding-left:  15px; 
     

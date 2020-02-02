@@ -8,8 +8,20 @@ textarea {
 	font-family: $font__body;
 	// font-family: 'Open Sans Condensed';
 	font-weight: 600;
-	@include font-size( 1.05 );
+	@include font-size( 1.01 );
 	line-height: $font__line-height-body;
+}
+
+a {
+	font-family: $font__mont;
+	font-weight: 400;;
+	color: #ffffff;
+}
+
+.site-info {
+	font-family: $font__mont;
+	font-weight: 400;
+	@include font-size( .9 );
 }
 
 

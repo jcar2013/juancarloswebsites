@@ -58,7 +58,7 @@ $footer_section = get_section_mods( 'footer' );
 
 			<hr class="featurette-divider">
 
-			<div class="row row-lower-footer align-items-center">
+			<div class="row site-info align-items-center">
 				<!-- End logo spacing column -->
 				<div class="col col-12 col-md-6">
 					<?php
@@ -89,7 +89,7 @@ $footer_section = get_section_mods( 'footer' );
 				</div><!-- .col -->
 			</div><!-- .site-contact -->
 
-			<div class="site-info row align-items-center">
+			<div class="row site-info align-items-center">
 				<!-- End logo spacing column -->
 				<div class="col col-12 col-md-6">
 					<?php

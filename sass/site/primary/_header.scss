@@ -65,8 +65,9 @@
 			.site-title {
 				text-align: start;
 				font-size: 1.3rem;
-				font-family: $font__title;
+
 				a {
+					font-family: $font__title;
 					color: #ffffff;
 					text-decoration: none;
 					// &:hover {

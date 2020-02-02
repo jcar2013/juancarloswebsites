@@ -1,7 +1,9 @@
 body {
-	h1, h4, h5, h6 {
+	h4, h5, h6 {
 		clear: both;
-		font-family: $font__body;
+		font-family: $font__heading;
+		@include font-size( 1.25 );
+		// font-weight: 500;
 	}
 
 	h1 {
