@@ -181,7 +181,9 @@ get_header();
 										<h2 class="project-heading"><?php echo wp_kses_post( $project->project_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $project->project_subheader ); ?></span></h2>
 										<p class="project-description"><?php echo wp_kses_post( $project->project_description ); ?></p>
 										<div class="text-center">
-											<a class="btn btn-2 js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_git ); ?>">Github Repo</a>
+											<?php if ( ! empty( $project->project_btn_git ) ) : ?>
+												<a class="btn btn-2 js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_git ); ?>">Github Repo</a>
+											<?php endif; ?>
 											<a class="btn btn-1 js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_link ); ?>">Visit Page</a>
 										</div>
 									</div>
@@ -225,7 +227,9 @@ get_header();
 										<h2 class="project-heading"><?php echo wp_kses_post( $contribution->contribution_header ); ?> | <span class="text-muted"><?php echo wp_kses_post( $contribution->contribution_subheader ); ?></span></h2>
 										<p class="featurette-text"><?php echo wp_kses_post( $contribution->contribution_description ); ?></p>
 										<div class="text-center">
-											<a class="btn btn-2 js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_git ); ?>">Github Repo</a>
+											<?php if ( ! empty( $contribution->contribution_btn_git ) ) : ?>
+												<a class="btn btn-2 js-scroll-trigger btn-projects" href="<?php echo esc_url( $project->project_btn_git ); ?>">Github Repo</a>
+											<?php endif; ?>
 											<a class="btn btn-1 js-scroll-trigger btn-projects" href="<?php echo esc_url( $contribution->contribution_btn_link ); ?>">Visit Page</a>
 										</div>
 									</div>
