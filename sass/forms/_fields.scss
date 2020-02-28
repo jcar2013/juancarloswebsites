@@ -24,6 +24,26 @@ textarea {
 	}
 }
 
+form .nf-form-content,
+form .nf-field-label {
+	label {
+		@include font-size( 1.01 );
+		font-weight: 600;
+	}
+
+	input.ninja-forms-field {
+		height: 45px;
+	}
+
+	textarea.ninja-forms-field {
+		height: 100px;
+	}
+
+	.nf-error.field-wrap .nf-field-element:after {
+		height: 43px;
+	}	
+}
+
 select {
 	border: 1px solid $color__border-input;
 }
