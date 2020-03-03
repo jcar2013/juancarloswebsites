@@ -1,20 +1,25 @@
-button {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
-
+.btn,
+button,
+form .nf-form-content input[type=button] {
+	display: inline-block;
+	font-weight: 400;
+	color: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: rgba( #000, .9 );
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 18px;
+	line-height: 1.5;
+	border-radius: .25rem;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
+		background-color: #444444;
+		color: #ffffff;
 	}
 }
 
@@ -27,8 +32,8 @@ button {
 	border-color: rgba( #000, 1);
 
 	&:hover {
-		color: $color__link-hover;
-		// background-color: rgba( #272B2E, 1 );
+		background-color: #444444;
+		color: #ffffff;
 	}
 }
 
@@ -41,6 +46,7 @@ button {
 	border-color: rgba( #000, 1);
 
 	&:hover {
-		color: $color__link-hover;
+		background-color: rgba( #000, .9 );
+		color: #ffffff;
 	}
 }
