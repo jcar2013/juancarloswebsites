@@ -1,3 +1,4 @@
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -31,16 +32,32 @@ form .nf-field-label {
 		font-weight: 600;
 	}
 
-	input.ninja-forms-field {
-		height: 45px;
+	input.ninja-forms-field:not([type=button]) {
+		height: 40px;
+		color: $color__text-input;
+		border: 1px solid $color__border-input;
+		border-radius: 5px;
+		padding: 3px;
+	
+		&:focus {
+			color: $color__text-input-focus;
+		}
 	}
 
 	textarea.ninja-forms-field {
-		height: 100px;
+		height: 90px;
+		color: $color__text-input;
+		border: 1px solid $color__border-input;
+		border-radius: 3px;
+		padding: 3px;
+	
+		&:focus {
+			color: $color__text-input-focus;
+		}
 	}
 
 	.nf-error.field-wrap .nf-field-element:after {
-		height: 43px;
+		height: 38px;
 	}	
 }
 
