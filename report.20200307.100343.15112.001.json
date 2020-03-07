@@ -3,9 +3,9 @@
   "header": {
     "event": "Allocation failed - JavaScript heap out of memory",
     "trigger": "FatalError",
-    "filename": "report.20200207.100230.1568.001.json",
-    "dumpEventTime": "2020-02-07T10:02:30Z",
-    "processId": 1568,
+    "filename": "report.20200307.100343.15112.001.json",
+    "dumpEventTime": "2020-03-07T10:03:43Z",
+    "processId": 15112,
     "commandLine": [
       "C:\\Program Files\\nodejs\\\\node.exe",
       "C:\\Program Files\\nodejs\\\\node_modules\\gulp\\bin\\gulp.js"
@@ -52,79 +52,79 @@
   },
   "nativeStack": [
     {
-      "pc": "0x00007ff67976d35e",
+      "pc": "0x00007ff6ebe0d35e",
       "symbol": "SSL_SESSION_get0_peer+16478"
     },
     {
-      "pc": "0x00007ff67976c204",
+      "pc": "0x00007ff6ebe0c204",
       "symbol": "SSL_SESSION_get0_peer+12036"
     },
     {
-      "pc": "0x00007ff67976ba1b",
+      "pc": "0x00007ff6ebe0ba1b",
       "symbol": "SSL_SESSION_get0_peer+10011"
     },
     {
-      "pc": "0x00007ff6798593f2",
+      "pc": "0x00007ff6ebef93f2",
       "symbol": "uv_loop_fork+88258"
     },
     {
-      "pc": "0x00007ff679c7e72e",
+      "pc": "0x00007ff6ec31e72e",
       "symbol": "v8::internal::FatalProcessOutOfMemory+798"
     },
     {
-      "pc": "0x00007ff679c7e667",
+      "pc": "0x00007ff6ec31e667",
       "symbol": "v8::internal::FatalProcessOutOfMemory+599"
     },
     {
-      "pc": "0x00007ff679d32144",
+      "pc": "0x00007ff6ec3d2144",
       "symbol": "v8::internal::Heap::RootIsImmortalImmovable+14068"
     },
     {
-      "pc": "0x00007ff679d27f52",
+      "pc": "0x00007ff6ec3c7f52",
       "symbol": "v8::internal::Heap::CollectGarbage+7234"
     },
     {
-      "pc": "0x00007ff679d26768",
+      "pc": "0x00007ff6ec3c6768",
       "symbol": "v8::internal::Heap::CollectGarbage+1112"
     },
     {
-      "pc": "0x00007ff679d30097",
+      "pc": "0x00007ff6ec3d0097",
       "symbol": "v8::internal::Heap::RootIsImmortalImmovable+5703"
     },
     {
-      "pc": "0x00007ff679d30116",
+      "pc": "0x00007ff6ec3d0116",
       "symbol": "v8::internal::Heap::RootIsImmortalImmovable+5830"
     },
     {
-      "pc": "0x00007ff679e67cdb",
+      "pc": "0x00007ff6ec507cdb",
       "symbol": "v8::internal::Factory::AllocateRawWithImmortalMap+59"
     },
     {
-      "pc": "0x00007ff679e6a5cd",
+      "pc": "0x00007ff6ec50a5cd",
       "symbol": "v8::internal::Factory::NewRawOneByteString+77"
     },
     {
-      "pc": "0x00007ff679cdeb61",
+      "pc": "0x00007ff6ec37eb61",
       "symbol": "v8::internal::Smi::SmiPrint+337"
     },
     {
-      "pc": "0x00007ff679c783c3",
+      "pc": "0x00007ff6ec3183c3",
       "symbol": "v8::internal::JSTypedArray::element_size+5699"
     },
     {
-      "pc": "0x00007ff67a0918bd",
+      "pc": "0x00007ff6ec7318bd",
       "symbol": "v8::internal::LocalEmbedderHeapTracer::SetEmbedderStackStateForNextFinalization+46429"
     },
     {
-      "pc": "0x000000d6e6c50481",
+      "pc": "0x0000024447b50481",
       "symbol": ""
     }
   ],
   "javascriptHeap": {
-    "totalMemory": 1493221376,
-    "totalCommittedMemory": 1493221376,
-    "usedMemory": 1453747128,
-    "availableMemory": 35290608,
+    "totalMemory": 1492172800,
+    "totalCommittedMemory": 1492172800,
+    "usedMemory": 1453455016,
+    "availableMemory": 36294304,
     "memoryLimit": 1526909922,
     "heapSpaces": {
       "read_only_space": {
@@ -138,36 +138,36 @@
         "memorySize": 2097152,
         "committedMemory": 2097152,
         "capacity": 1031168,
-        "used": 156576,
-        "available": 874592
+        "used": 159720,
+        "available": 871448
       },
       "old_space": {
-        "memorySize": 1422594048,
-        "committedMemory": 1422594048,
-        "capacity": 1389314704,
-        "used": 1388713488,
-        "available": 601216
+        "memorySize": 1422069760,
+        "committedMemory": 1422069760,
+        "capacity": 1389078976,
+        "used": 1388519496,
+        "available": 559480
       },
       "code_space": {
-        "memorySize": 3145728,
-        "committedMemory": 3145728,
-        "capacity": 2319968,
-        "used": 2319968,
+        "memorySize": 2621440,
+        "committedMemory": 2621440,
+        "capacity": 2216864,
+        "used": 2216864,
         "available": 0
       },
       "map_space": {
         "memorySize": 2109440,
         "committedMemory": 2109440,
-        "capacity": 1144880,
-        "used": 1144880,
+        "capacity": 1146720,
+        "used": 1146720,
         "available": 0
       },
       "large_object_space": {
         "memorySize": 62750720,
         "committedMemory": 62750720,
-        "capacity": 94711432,
+        "capacity": 95760008,
         "used": 61378696,
-        "available": 33332736
+        "available": 34381312
       },
       "new_large_object_space": {
         "memorySize": 0,
@@ -179,16 +179,16 @@
     }
   },
   "resourceUsage": {
-    "userCpuSeconds": 364.14,
-    "kernelCpuSeconds": 256.687,
-    "cpuConsumptionPercent": 0.978389,
-    "maxRss": 2591748096,
+    "userCpuSeconds": 411.328,
+    "kernelCpuSeconds": 212.39,
+    "cpuConsumptionPercent": 1.84521,
+    "maxRss": 2266656768,
     "pageFaults": {
-      "IORequired": 1935057,
+      "IORequired": 2199689,
       "IONotRequired": 0
     },
     "fsActivity": {
-      "reads": 2503,
+      "reads": 2499,
       "writes": 9
     }
   },
@@ -204,6 +204,8 @@
     "COMPUTERNAME": "DESKTOP-L7NLBNK",
     "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
     "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
     "GTK_BASEPATH": "D:\\",
     "HOMEDRIVE": "C:",
     "HOMEPATH": "\\Users\\Juan Carlos",
@@ -242,7 +244,7 @@
     "VBOX_MSI_INSTALL_PATH": "C:\\Program Files\\Oracle\\VirtualBox\\",
     "windir": "C:\\WINDOWS",
     "TERM_PROGRAM": "vscode",
-    "TERM_PROGRAM_VERSION": "1.41.1",
+    "TERM_PROGRAM_VERSION": "1.42.1",
     "LANG": "en_US.UTF-8",
     "COLORTERM": "truecolor"
   },
@@ -258,10 +260,10 @@
     "C:\\WINDOWS\\System32\\msvcrt.dll",
     "C:\\WINDOWS\\System32\\sechost.dll",
     "C:\\WINDOWS\\System32\\USER32.dll",
-    "C:\\WINDOWS\\System32\\win32u.dll",
     "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
-    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
     "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
     "C:\\WINDOWS\\System32\\gdi32full.dll",
     "C:\\WINDOWS\\System32\\msvcp_win.dll",
     "C:\\WINDOWS\\System32\\CRYPT32.dll",

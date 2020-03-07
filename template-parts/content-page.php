@@ -11,13 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="hero" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)">
-		<div class="hero-content">
-			<div class="hero-text">
-				<?php the_title( '<h1 class="hereo-title">', '</h1>' ); ?>
+	<?php if ( get_the_post_thumbnail_url() ) : ?>
+		<div class="hero" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)">
+			<div class="hero-content">
+				<div class="hero-text">
+					<?php the_title( '<h1 class="hereo-title">', '</h1>' ); ?>
+				</div>
 			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
