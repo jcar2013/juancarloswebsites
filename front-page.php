@@ -26,7 +26,7 @@ get_header();
 		/* This checks for slider object in order to parse slider section */
 		if ( ! empty( $top_slider ) ) :
 			?>
-			<section class="header-slider-section">
+			<section class="header-slider-section hero-wrap">
 				<div class="top-page-slider-wrap">
 				<?php
 				/* Foreach loop to build slider according to slides entered in the customizer */

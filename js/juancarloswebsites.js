@@ -15,8 +15,10 @@
 	function navbar_collapse()
 	{
 		var intFrame = window.innerHeight;
+		var heroImage = document.querySelector('.hero-wrap').offsetHeight;
+		console.log(heroImage);
 		console.log(intFrame);
-		if ($("#masthead").offset().top > intFrame) {
+		if ($("#masthead").offset().top > heroImage) {
 			$("#masthead").addClass("transparent-header");
 		} else {
 			$("#masthead").removeClass("transparent-header");

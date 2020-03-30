@@ -50,6 +50,10 @@
 	z-index: 9999;
 	@include prefix( transition, all .3s ease-in-out, o moz webkit );
 
+	&.transparent-header {
+		background: #000;
+	}
+
 	.brand-nav-bar {
 		height: 60px;
 		display: flex;
