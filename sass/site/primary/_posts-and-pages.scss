@@ -22,6 +22,7 @@
 	margin: 0 0 1.5em;
 }
 
+// content css for most pages 
 #content {
 	margin: 0;
  	padding: 60px 0 0 0;
@@ -71,6 +72,23 @@
 				max-width: 600px;
 				margin: 5px auto;
 			}
+		}
+	}
+}
+
+//******* CSS for About Me *******// 
+.about-me-page {
+	// about me header css
+	.site-header {
+		background: transparent;
+	}
+
+	// content of the whole page 
+	#content {
+		padding: 0;
+
+		.hero-text {
+			font-size: 3em;
 		}
 	}
 }

@@ -22,6 +22,12 @@ function juancarloswebsites_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	// Contact page body_class
+	global $post;
+	if ( is_page( 'about-me-1' ) ) {
+		$classes[] = 'about-me-page';
+	}
+	
 	return $classes;
 }
 add_filter( 'body_class', 'juancarloswebsites_body_classes' );
