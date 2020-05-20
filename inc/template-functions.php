@@ -24,7 +24,7 @@ function juancarloswebsites_body_classes( $classes ) {
 
 	// Contact page body_class
 	global $post;
-	if ( is_page( 'about-me-1' ) ) {
+	if ( is_page( 'about-me' ) ) {
 		$classes[] = 'about-me-page';
 	}
 	
