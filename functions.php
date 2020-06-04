@@ -80,6 +80,14 @@ if ( ! function_exists( 'juancarloswebsites_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		 * This is for custom image sizes for faster image parsing.
+		 *
+		 * @since 1.0.0
+		 */
+		add_image_size( 'custom_project_size', 481, 361, false );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'juancarloswebsites_setup' );

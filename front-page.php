@@ -188,7 +188,10 @@ get_header();
 										</div>
 									</div>
 									<div class="col-md-5 col-image">
-										<img src="<?php echo esc_attr( $project->project_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image">
+										<!-- <img src="<?php //echo esc_attr( $project->project_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image"> -->
+
+										<img src="<?php echo esc_url( wp_get_attachment_image_src( $project->project_img_1, 'custom_project_size', false ), array( 'https' ), 'display' ); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( $project->project_img_1 ), 'custom_project_size', false ); ?>" >
+
 										<img src="<?php echo esc_attr( $project->project_img_2 ); ?>" class="project-mobile-img img-fluid mx-auto" alt="project mobile image">
 									</div>
 								</div>
@@ -243,6 +246,7 @@ get_header();
 										echo "<hr class='featurette-divider'>";
 									}
 									$count++;
+
 									?>
 							<?php endif; ?>
 						<?php endforeach; ?>
