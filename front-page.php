@@ -190,7 +190,12 @@ get_header();
 									<div class="col-md-5 col-image">
 										<!-- <img src="<?php //echo esc_attr( $project->project_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image"> -->
 
-										<img src="<?php echo esc_url( wp_get_attachment_image_src( $project->project_img_1, 'custom_project_size', false ), array( 'https' ), 'display' ); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( $project->project_img_1 ), 'custom_project_size', false ); ?>" >
+										<img src="<?php echo wp_get_attachment_image_url( $project->project_img_1, 'custom_project_size' ) ?>"
+     									srcset="<?php echo wp_get_attachment_image_srcset( $project->project_img_1, 'custom_project_size' ) ?>"
+     									sizes="<?php echo wp_get_attachment_image_sizes( $project->project_img_1, 'custom_project_size' ) ?>"
+											class="project-img img-fluid mx-auto" alt="project desktop image" />
+
+										<!-- <img src="<?php //echo esc_url( wp_get_attachment_image_src( $project->project_img_1, 'thumbnail' ) ); ?>" srcset="<?php //echo esc_attr( wp_get_attachment_image_srcset( $project->project_img_1 ), 'thumbnail', false ); ?>" > -->
 
 										<img src="<?php echo esc_attr( $project->project_img_2 ); ?>" class="project-mobile-img img-fluid mx-auto" alt="project mobile image">
 									</div>
