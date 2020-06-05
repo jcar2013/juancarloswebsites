@@ -991,7 +991,7 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 				$wp_customize,
 				'1st_project_img' . $i . '_control',
 				array(
-					'label'       => '1st Project Desktop Image ' . $i,
+					'label'       => '1st Project Desktop Image ',
 					'section'     => 'projects_section',
 					'settings'    => '1st_project_img' . $i,
 					'type'        => 'media',
@@ -1011,14 +1011,14 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 
 		// Project Image Setting Control.
 		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
+			new WP_Customize_Media_Control(
 				$wp_customize,
 				'2nd_project_img' . $i . '_control',
 				array(
-					'label'       => '2nd Project Mobile Image ' . $i,
+					'label'       => '2nd Project Mobile Image ',
 					'section'     => 'projects_section',
 					'settings'    => '2nd_project_img' . $i,
-					'type'        => 'image',
+					'type'        => 'media',
 					'description' => 'Add 2nd image for Project #' . $i,
 				)
 			)

@@ -86,7 +86,8 @@ if ( ! function_exists( 'juancarloswebsites_setup' ) ) :
 		 *
 		 * @since 1.0.0
 		 */
-		add_image_size( 'custom_project_size', 481, 361, false );
+		add_image_size( 'custom_project_desktop_size', 481, 361, false );
+		add_image_size( 'custom_project_mobile_size', 358, 253, false );
 
 	}
 endif;
