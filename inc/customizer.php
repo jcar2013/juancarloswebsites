@@ -1199,14 +1199,14 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 
 		// Contributions Image Setting Control.
 		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
+			new WP_Customize_Media_Control(
 				$wp_customize,
 				'1st_contribution_img' . $i . '_control',
 				array(
-					'label'       => '1st Contribution Desktop Image ' . $i,
+					'label'       => '1st Contribution Desktop Image ',
 					'section'     => 'projects_section',
 					'settings'    => '1st_contribution_img' . $i,
-					'type'        => 'image',
+					'type'        => 'media',
 					'description' => 'Add 1st image for Contribution #' . $i,
 				)
 			)
@@ -1223,14 +1223,14 @@ function juancarloswebsites_customize_register( $wp_customize ) {
 
 		// Contributions Image Setting Control.
 		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
+			new WP_Customize_Media_Control(
 				$wp_customize,
 				'2nd_contribution_img' . $i . '_control',
 				array(
-					'label'       => '2nd Contribution Mobile Image ' . $i,
+					'label'       => '2nd Contribution Mobile Image ',
 					'section'     => 'projects_section',
 					'settings'    => '2nd_contribution_img' . $i,
-					'type'        => 'image',
+					'type'        => 'media',
 					'description' => 'Add 2nd image for Contribution #' . $i,
 				)
 			)

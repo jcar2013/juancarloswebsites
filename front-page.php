@@ -244,8 +244,20 @@ get_header();
 										</div>
 									</div>
 									<div class="col-md-5 col-image">
-										<img src="<?php echo esc_attr( $contribution->contribution_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image">
-										<img src="<?php echo esc_attr( $contribution->contribution_img_2 ); ?>" class="project-mobile-img img-fluid mx-auto" alt="project mobile image">
+										<!-- <img src="<?php //echo esc_attr( $contribution->contribution_img_1 ); ?>" class="project-img img-fluid mx-auto" alt="project desktop image"> -->
+										<!-- <img src="<?php //echo esc_attr( $contribution->contribution_img_2 ); ?>" class="project-mobile-img img-fluid mx-auto" alt="project mobile image"> -->
+
+										<img src="<?php echo wp_get_attachment_image_url( $contribution->contribution_img_1, 'custom_project_desktop_size' ) ?>"
+     									srcset="<?php echo wp_get_attachment_image_srcset( $contribution->contribution_img_1, 'custom_project_desktop_size' ) ?>"
+     									sizes="<?php echo wp_get_attachment_image_sizes( $contribution->contribution_img_1, 'custom_project_desktop_size' ) ?>"
+											class="project-img img-fluid mx-auto" alt="contribution desktop image" />
+
+										<img src="<?php echo wp_get_attachment_image_url( $contribution->contribution_img_2, 'custom_project_mobile_size' ) ?>"
+     									srcset="<?php echo wp_get_attachment_image_srcset( $contribution->contribution_img_2, 'custom_project_mobile_size' ) ?>"
+     									sizes="<?php echo wp_get_attachment_image_sizes( $contribution->contribution_img_2, 'custom_project_mobile_size' ) ?>"
+											 class="project-mobile-img img-fluid mx-auto" alt="contribution mobile image" />
+
+
 									</div>
 								</div>
 								<?php 
