@@ -110,16 +110,23 @@
 	@include media-breakpoint( lg ) {
 		padding: 0 25px;
 	}
+
+
+	@include media-breakpoint( lg ) {
+		// .site-header {
+			background: transparent;
+		// }
+	}
 }
 
 .home {
 
 	.site-header {
-		background: #000;
+		// background: #000;
 		
-		&.transparent-header {
-			background: #000;
-		}
+		// &.transparent-header {
+		// 	background: #000;
+		// }
 		li i.fa-search,
 		li i.fa-shopping-cart {
 			font-size: 20px;
@@ -130,11 +137,11 @@
 		padding: 0;
 	}
 
-	@include media-breakpoint( lg ) {
-		.site-header {
-			background: transparent;
-		}
-	}
+	// @include media-breakpoint( lg ) {
+	// 	.site-header {
+	// 		background: transparent;
+	// 	}
+	// }
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
